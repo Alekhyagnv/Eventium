@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class student_login extends AppCompatActivity {
 
     EditText e3,e4;
-    Button b2,b3;
+    Button b2,b4;
     FirebaseAuth auth;
 
     ProgressDialog pd;
@@ -29,37 +29,6 @@ public class student_login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_login);
-
-        auth=FirebaseAuth.getInstance();
-
-        e3=(EditText)findViewById(R.id.editText3);
-        e4=(EditText)findViewById(R.id.editText4);
-        b2=(Button)findViewById(R.id.button2);
-        b3=(Button)findViewById(R.id.button3);
-
-        pd=new ProgressDialog(this);
-
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String s1 = e3.getText().toString();
-                String s2 = e4.getText().toString();
-                Login(s1,s2);
-            }
-
-
-
-        });
-
-
-        b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(student_login.this,student_register.class);
-                startActivity(i);
-            }
-        });
-
 
 
 

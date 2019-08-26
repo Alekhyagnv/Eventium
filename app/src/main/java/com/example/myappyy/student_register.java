@@ -9,6 +9,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,11 +24,15 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class student_register extends AppCompatActivity {
 
-    EditText e1,e2;
+    EditText e1,e2,e3;
     Button b1;
     FirebaseAuth auth;
+    String string;
+    RadioButton rb1;
+    RadioGroup radioGroup;
     ProgressDialog pd;
     private static final String TAG = "Register";
+    String type;
 
 
     @Override
@@ -35,12 +41,19 @@ public class student_register extends AppCompatActivity {
         setContentView(R.layout.activity_student_register);
 
         auth=FirebaseAuth.getInstance();
+        radioGroup= findViewById(R.id.radio_group_register);
+
+
+
 
         pd=new ProgressDialog(this);
 
-        e1=(EditText) findViewById(R.id.editText);
-        e2=(EditText)findViewById(R.id.editText2);
-        b1=(Button)findViewById(R.id.button);
+        e1=(EditText) findViewById(R.id.editText_register);
+        e2=(EditText)findViewById(R.id.editText2_register);
+        e3=findViewById(R.id.editText3_register);
+        b1=(Button)findViewById(R.id.button11_register);
+
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,14 +74,12 @@ public class student_register extends AppCompatActivity {
         }
         else if(TextUtils.isEmpty(s2)){
             Toast.makeText(getApplicationContext(),"password",Toast.LENGTH_LONG).show();;
-
-
         }
         else {
 
             pd.setTitle("Registering");
             pd.setMessage("Please wait While Creating your Account");
-            pd.setCancelable(true);
+            pd.setCancelable(false);
             pd.show();
 
             auth.createUserWithEmailAndPassword(s1, s2)
@@ -77,8 +88,9 @@ public class student_register extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()) {
-                                Toast.makeText(getApplicationContext(),"successful",Toast.LENGTH_LONG).show();;
-                                Intent intent=new Intent(student_register.this,MainActivity.class);
+                                Toast.makeText(getApplicationContext(),"yes",Toast.LENGTH_LONG).show();
+                                Intent intent=new Intent(student_register.this,Setupactivity_student.class);
+                                intent.putExtra("type",type);
                                 startActivity(intent);
                                 finish();
                                 pd.dismiss();
@@ -87,21 +99,6 @@ public class student_register extends AppCompatActivity {
                                 String msg=task.getException().toString();
                                 Toast.makeText(getApplicationContext(),"error"+msg,Toast.LENGTH_LONG).show();
                                 pd.dismiss();
-                                try {
-                                    throw task.getException();
-                                } catch(FirebaseAuthWeakPasswordException e) {
-                                    System.out.println(e);
-
-                                } catch(FirebaseAuthInvalidCredentialsException e) {
-                                    System.out.println(e);
-
-                                } catch(FirebaseAuthUserCollisionException e) {
-                                    System.out.println(e);
-
-                                } catch(Exception e) {
-                                    System.out.println(e);
-
-                                }
                             }
                         }
 
@@ -109,15 +106,29 @@ public class student_register extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser user=auth.getCurrentUser();
-        if(user!=null){
-            Intent intent=new Intent(student_register.this,MainActivity.class);
-            startActivity(intent);
-            finish();
+
+
+    public void radioclick(View view) {
+
+
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.faculty:
+                if (checked) {
+                    type = "FACULTY";
+                }
+                    break;
+            case R.id.student:
+                if (checked) {
+                    type = "STUDENT";
+                }
+                break;
         }
+
+
+
     }
 }
 

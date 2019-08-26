@@ -4,110 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".student_register">
-    <LinearLayout
-        android:id="@+id/linearLayout_register"
+
+
+    <TextView
+        android:id="@+id/ttv1_reg"
+        style="@style/CustomTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="REGISTER"
+        android:textSize="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/gradblue" />
+    <EditText
+        android:id="@+id/editText_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/edit_bg"
+        android:hint="  Enter Email"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ttv1_reg" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutInput1"
-        android:layout_width="297dp"
-        android:layout_height="295dp"
-        android:layout_centerHorizontal="true"
+    <EditText
+        android:id="@+id/editText2_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/gradwhite"
-        android:orientation="vertical"
-
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/edit_bg"
+        android:padding="10dp"
+        android:hint="  Enter Password"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout_register">
+        app:layout_constraintTop_toBottomOf="@+id/editText_register" />
+    <EditText
+        android:id="@+id/editText3_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/edit_bg"
+        android:padding="10dp"
+        android:hint="  Re-Enter Password"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2_register" />
 
-        <TextView
-            android:layout_width="match_parent"
+    <RadioGroup
+        android:id="@+id/radio_group_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText3_register">
+
+        <RadioButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Register "
-            android:textColor="#405CF8"
-            android:textSize="15sp"
+            android:buttonTint="@color/white"
+            android:text="Faculty"
+            android:onClick="radioclick"
+            android:id="@+id/faculty"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="Student"
+            android:id="@+id/student"
+            android:layout_marginLeft="20dp"
+            android:onClick="radioclick"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/bor1"
-            android:drawablePadding="20dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="10dp" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/bordown"
-            android:drawablePadding="20dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="10dp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/borbothblue"
-            android:text="Register"
-            android:textAllCaps="false"
-            android:textColor="#F7F8FA" />
+    </RadioGroup>
 
 
-    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageVIew_register"
-        android:layout_width="119dp"
-        android:layout_height="114dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="8dp"
+
+    <Button
+        android:id="@+id/button11_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:padding="5dp"
-        android:src="@drawable/lo"
-        app:layout_constraintBottom_toTopOf="@+id/layoutInput1"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/button_bg"
+        android:text="register"
+        android:textStyle="bold"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout_register"
-        app:layout_constraintVertical_bias="0.791" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_register" />
 
 
 

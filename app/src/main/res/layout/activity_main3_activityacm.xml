@@ -167,25 +167,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edacmprofile"
             app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/edacmlink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border1"
+            android:hint="Link(optional)"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="#050505"
+            android:textColorHint="#050505"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edacmtarget"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+
         <Button
             android:id="@+id/bacminsert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/bor2"
-            android:text="Add Event"
-            android:textSize="15sp"
             android:padding="10dp"
-            android:textStyle="bold"
+            android:text="Add Event"
             android:textColor="#FA070707"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edacmtarget"
-            tools:layout_editor_absoluteY="645dp" />
+            app:layout_constraintTop_toBottomOf="@id/edacmlink"
+            app:layout_constraintVertical_bias="1.0" />
 
 
 

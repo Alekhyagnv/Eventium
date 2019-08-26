@@ -4,82 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context=".Setupactivity_student">
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
+
+
+    <TextView
+        android:id="@+id/sheet1_set11"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="username"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:text="Account Details"
+        android:layout_marginTop="60dp"
+        android:padding="8dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055" />
+        />
+
+
 
     <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:id="@+id/editText511"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/et_bg"
+        android:hint="Name:"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="#A6FDFDFD"
+        android:textColor="#FFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sheet1_set11"  />
+
+    <EditText
+        android:id="@+id/editText611"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#A6FCFCFD"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Hallticketno."
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/et_bg"
+        android:hint="Roll No:"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textColor="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintTop_toBottomOf="@id/editText511" />
 
     <EditText
-        android:id="@+id/editText7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="376dp"
-        android:ems="10"
-        android:hint="branch"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="wrap_content"
+        android:id="@+id/editText711"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="section"
+        android:background="@drawable/et_bg"
+        android:hint="Branch:"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorHint="#A6FCFCFD"
+        android:padding="16dp"
+        android:textColor="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintTop_toBottomOf="@+id/editText611" />
+
+    <EditText
+        android:id="@+id/editText811"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#A6FCFCFD"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/et_bg"
+        android:hint="Year:"
+        android:inputType="text"
+        android:textColor="#FFF"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText711" />
 
     <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="84dp"
-        android:text="Register!!!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/blue"
+        android:text="SAVE "
+        android:id="@+id/button811"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/editText811" />
 
 </android.support.constraint.ConstraintLayout>

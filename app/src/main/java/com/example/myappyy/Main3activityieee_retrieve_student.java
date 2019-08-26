@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -54,12 +55,13 @@ public class Main3activityieee_retrieve_student extends AppCompatActivity {
                 viewHolder.setImage(model.getImage());
                 viewHolder.setStudents(model.getStudents());
                 viewHolder.setDate(model.getDate());
+                viewHolder.setLink(model.getLink());
                 final String s1=model.getEventname();
                 final String s3=model.getInfo();
                 final String s5=model.getImage();
                 final String s4=model.getStudents();
                 final String s2=model.getDate();
-               // final String s6=model.getUid();
+               final String s6=model.getLink();
 
                 viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -71,7 +73,7 @@ public class Main3activityieee_retrieve_student extends AppCompatActivity {
                         intent.putExtra("a3",s3);
                         intent.putExtra("a4",s4);
                         intent.putExtra("a5",s5);
-                        //intent.putExtra("a6",s6);
+                        intent.putExtra("a6",s6);
                         startActivity(intent);
 
 
@@ -121,6 +123,15 @@ public class Main3activityieee_retrieve_student extends AppCompatActivity {
         public void setStudents(String students) {
             TextView t2 = mview.findViewById(R.id.retrivalt2);
             t2.setText(students);
+        }
+        public void setLink(String link) {
+            TextView t4 = mview.findViewById(R.id.retrivallink);
+            if(!TextUtils.isEmpty(link))
+            {
+                t4.setVisibility(View.VISIBLE);
+                t4.setText(link);
+            }
+
         }
     }
 }

@@ -39,7 +39,7 @@ import id.zelory.compressor.Compressor;
 public class Main3Activityweb extends AppCompatActivity {
 
     private ImageView profile;
-    private EditText eventname,date,targeted,info;
+    private EditText eventname,date,targeted,info,link;
     private Button uploadBtn1,save;
     ProgressDialog progressDialog;
 
@@ -49,7 +49,7 @@ public class Main3Activityweb extends AppCompatActivity {
     String postdate,posttime,postrandomname,downloadurl;
     DatabaseReference useref,postref;
 
-    String event,date1,target,info1,uid;
+    String event,date1,target,info1,uid,link1;
 
 
 
@@ -70,7 +70,6 @@ public class Main3Activityweb extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3_activityweb);
-        firebaseAuth = FirebaseAuth.getInstance();
 
         storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -82,6 +81,7 @@ public class Main3Activityweb extends AppCompatActivity {
         targeted=(EditText)findViewById(R.id.edwebtarget) ;
         uploadBtn1=(Button)findViewById(R.id.bwebupload);
         info=(EditText)findViewById(R.id.edwebprofile);
+        link=(EditText)findViewById(R.id.edweblink);
 
         save=(Button)findViewById(R.id.bwebsave);
         profile=(ImageView)findViewById(R.id.imgweb) ;
@@ -199,7 +199,11 @@ public class Main3Activityweb extends AppCompatActivity {
     }
 
     private void savingpostinfo() {
-        //uid=firebaseAuth.getCurrentUser().getUid();
+        firebaseAuth = FirebaseAuth.getInstance();
+
+
+        uid=firebaseAuth.getCurrentUser().getUid();
+        link1=link.getText().toString();
 
         HashMap postmap=new HashMap();
         postmap.put("eventname",event);
@@ -207,8 +211,9 @@ public class Main3Activityweb extends AppCompatActivity {
         postmap.put("info",info1);
         postmap.put("students",target);
         postmap.put("image",thumb_downloadurl);
-       // postmap.put("uid",uid);
-        postref.child(postrandomname).updateChildren(postmap).addOnCompleteListener(new OnCompleteListener() {
+        postmap.put("link",link1);
+        postmap.put("uid",uid);
+        postref.child(uid).updateChildren(postmap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
                 if(task.isSuccessful())

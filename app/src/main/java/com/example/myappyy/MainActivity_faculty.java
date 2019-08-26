@@ -1,19 +1,21 @@
 package com.example.myappyy;
 
 import android.content.Intent;
+import android.service.autofill.TextValueSanitizer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity_faculty extends AppCompatActivity {
 
     Toolbar toolbar;
-    CardView cd1,cd2;
+    TextView cd1,cd2;
 
     FirebaseAuth auth;
 
@@ -21,12 +23,10 @@ public class MainActivity_faculty extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_faculty);
-        cd1=(CardView)findViewById(R.id.cd11);
-        cd2=(CardView)findViewById(R.id.cd21);
-        toolbar = (Toolbar) findViewById(R.id.toolbar1_main);
-        setSupportActionBar(toolbar);
+        cd1=findViewById(R.id.cd11);
+        cd2=findViewById(R.id.cd21);
         auth=FirebaseAuth.getInstance();
-        getSupportActionBar().setTitle("MyAppy");
+
 
 
 

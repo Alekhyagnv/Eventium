@@ -27,6 +27,7 @@
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             >
 
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar123"
                 android:layout_width="match_parent"

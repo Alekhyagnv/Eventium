@@ -39,7 +39,7 @@ import id.zelory.compressor.Compressor;
 public class Main3Activitycsi extends AppCompatActivity {
 
     private ImageView profile;
-    private EditText eventname,date,targeted,info;
+    private EditText eventname,date,targeted,info,link;
     private Button uploadBtn1,save;
     ProgressDialog progressDialog;
 
@@ -49,7 +49,7 @@ public class Main3Activitycsi extends AppCompatActivity {
     String postdate,posttime,postrandomname,downloadurl;
     DatabaseReference useref,postref;
 
-    String event,date1,target,info1,uid;
+    String event,date1,target,info1,uid,link1;
 
 
 FirebaseAuth firebaseAuth;
@@ -69,7 +69,7 @@ FirebaseAuth firebaseAuth;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3_activitycsi);
-        firebaseAuth = FirebaseAuth.getInstance();
+
 
         storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -81,6 +81,7 @@ FirebaseAuth firebaseAuth;
         targeted=(EditText)findViewById(R.id.edcsitarget) ;
         uploadBtn1=(Button)findViewById(R.id.bcsiupload);
         info=(EditText)findViewById(R.id.edcsiprofile);
+        link=(EditText)findViewById(R.id.edcsilink);
 
         save=(Button)findViewById(R.id.bcsisave);
         profile=(ImageView)findViewById(R.id.imgcsi) ;
@@ -197,16 +198,18 @@ FirebaseAuth firebaseAuth;
     }
 
     private void savingpostinfo() {
+        firebaseAuth=FirebaseAuth.getInstance();
         uid=firebaseAuth.getCurrentUser().getUid();
-
+link1=link.getText().toString();
         HashMap postmap=new HashMap();
         postmap.put("eventname",event);
         postmap.put("date",date1);
         postmap.put("info",info1);
         postmap.put("students",target);
         postmap.put("image",thumb_downloadurl);
+        postmap.put("link",link1);
         postmap.put("uid",uid);
-        postref.child(postrandomname).updateChildren(postmap).addOnCompleteListener(new OnCompleteListener() {
+        postref.child(uid).updateChildren(postmap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
                 if(task.isSuccessful())

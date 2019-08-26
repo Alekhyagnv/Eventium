@@ -25,6 +25,7 @@ public class Setupactivity_student extends AppCompatActivity {
     FirebaseAuth auth;
     DatabaseReference reference;
     String currentid;
+    String type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,13 @@ public class Setupactivity_student extends AppCompatActivity {
         currentid = auth.getCurrentUser().getUid();
         reference = FirebaseDatabase.getInstance().getReference().child("users");
 
-        e5 = (EditText) findViewById(R.id.editText5);
-        e6 = (EditText) findViewById(R.id.editText6);
-        e7 = (EditText) findViewById(R.id.editText7);
-        e8 = (EditText) findViewById(R.id.editText8);
-        b8 = findViewById(R.id.button8);
+        type=getIntent().getStringExtra("type");
+
+        e5 = (EditText) findViewById(R.id.editText511);
+        e6 = (EditText) findViewById(R.id.editText611);
+        e7 = (EditText) findViewById(R.id.editText711);
+        e8 = (EditText) findViewById(R.id.editText811);
+        b8 = findViewById(R.id.button811);
 
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +76,7 @@ public class Setupactivity_student extends AppCompatActivity {
                     reference.child(currentid).child("username").setValue(s1);
                     reference.child(currentid).child("hallticketno").setValue(s2);
                     reference.child(currentid).child("branch").setValue(s3);
+                    reference.child(currentid).child("type").setValue(type);
                     reference.child(currentid).child("section").setValue(s4).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

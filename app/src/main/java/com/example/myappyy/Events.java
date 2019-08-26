@@ -2,20 +2,29 @@ package com.example.myappyy;
 
 public class Events {
 
-    String date,eventname,image,info,students,uid;
+    String date,eventname,image,info,students,uid,link;
 
     public  Events()
     {
 
     }
 
-    public Events(String date, String eventname, String image, String info, String students,String uid) {
+    public Events(String date, String eventname, String image, String info, String students,String link,String uid) {
         this.date = date;
         this.eventname = eventname;
         this.image = image;
         this.info = info;
         this.students = students;
-        this.uid=uid;
+       this.uid=uid;
+        this.link=link;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public String getUid() {

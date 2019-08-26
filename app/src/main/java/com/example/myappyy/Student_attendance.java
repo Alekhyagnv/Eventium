@@ -43,7 +43,7 @@ public class Student_attendance extends AppCompatActivity {
         eBranch=(EditText)findViewById(R.id.editText7_attendance);
         eename=(EditText)findViewById(R.id.editText9_attendance) ;
         eYear=(EditText)findViewById(R.id.editText8_attendance);
-        present=(TextView)findViewById(R.id.textView2_attendance);
+      //  present=(TextView)findViewById(R.id.textView2_attendance);
         t1=(TextView)findViewById(R.id.textView_attendance);
         studentAttendence=new StudentAttendence1();
 key=getIntent().getStringExtra("eventname");

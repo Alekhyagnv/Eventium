@@ -40,7 +40,7 @@ import id.zelory.compressor.Compressor;
 
 public class Main3Activityand extends AppCompatActivity {
     private ImageView profile;
-    private EditText eventname,date,targeted,info;
+    private EditText eventname,date,targeted,info,link;
     private Button uploadBtn1,save;
     ProgressDialog progressDialog;
 
@@ -50,7 +50,7 @@ public class Main3Activityand extends AppCompatActivity {
     String postdate,posttime,postrandomname,downloadurl;
     DatabaseReference useref,postref;
 
-    String event,date1,target,info1;
+    String event,date1,target,info1,link1;
 
 
 
@@ -88,7 +88,7 @@ public class Main3Activityand extends AppCompatActivity {
         targeted=(EditText)findViewById(R.id.eandtarget) ;
         uploadBtn1=(Button)findViewById(R.id.bandapload);
         info=(EditText)findViewById(R.id.eandprofile);
-
+        link=(EditText)findViewById(R.id.edandlink);
         save=(Button)findViewById(R.id.bandsave);
         profile=(ImageView)findViewById(R.id.imgand) ;
 
@@ -202,12 +202,14 @@ public class Main3Activityand extends AppCompatActivity {
 
 
 
+
     }
 
     private void savingpostinfo() {
 
         auth=FirebaseAuth.getInstance();
-       // uid=auth.getCurrentUser().getUid();
+       uid=auth.getCurrentUser().getUid();
+        link1=link.getText().toString();
 
         HashMap postmap=new HashMap();
         postmap.put("eventname",event);
@@ -215,8 +217,9 @@ public class Main3Activityand extends AppCompatActivity {
         postmap.put("info",info1);
         postmap.put("students",target);
         postmap.put("image",thumb_downloadurl);
-       // postmap.put("uid",uid);
-        postref.child(postrandomname).updateChildren(postmap).addOnCompleteListener(new OnCompleteListener() {
+        postmap.put("link",link1);
+        postmap.put("uid",uid);
+        postref.child(uid).updateChildren(postmap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
                 if(task.isSuccessful())

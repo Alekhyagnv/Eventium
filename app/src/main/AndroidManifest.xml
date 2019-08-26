@@ -9,7 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Android_details_student"></activity>
+        <activity android:name=".Activity_setup"></activity>
+        <activity android:name=".Loginpage" />
+        <activity android:name=".SliderAdapter1" />
+        <activity android:name=".SliderAdapter" />
+        <activity android:name=".Deleting_post" />
+        <activity android:name=".Report" />
+        <activity android:name=".Piechart" />
+        <activity android:name=".images_display" />
+        <activity android:name=".add_images" />
+        <activity android:name=".resetpassword" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".Edit_event_details" />
+        <activity android:name=".Android_details_student" />
         <activity android:name=".Main3Activity_dsc_retrieve_student" />
         <activity android:name=".Main3Activity_web_retrieve_student" />
         <activity android:name=".Main3Activity_iot_retrieve_student" />
@@ -21,8 +33,6 @@
         <activity android:name=".Main3Activity_acm_retrieve_student" />
         <activity android:name=".Finish" />
         <activity android:name=".Student_attendance" />
-        <activity android:name=".Chapters_student" />
-        <activity android:name=".Main2Activity_students" />
         <activity android:name=".Acm_options" />
         <activity android:name=".Iste_options" />
         <activity android:name=".Ieee_options" />
@@ -32,7 +42,6 @@
         <activity android:name=".Iot_options" />
         <activity android:name=".Malai_options" />
         <activity android:name=".faculty_options" />
-        <activity android:name=".MainActivity_faculty" />
         <activity android:name=".Eventss_display" />
         <activity android:name=".Android_details" />
         <activity android:name=".Setupactivity_student" />
@@ -56,10 +65,8 @@
         <activity android:name=".Main3Activitymalai_retrieve" />
         <activity android:name=".Main3Activitymalai" />
         <activity android:name=".Main3Activityand" />
-        <activity android:name=".Main3Activitychapters" />
-        <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Student_Faculty">
+        <activity android:name=".Main3Activity_welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -70,5 +77,7 @@
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

@@ -6,6 +6,9 @@
         <item name="colorPrimary">#277EC5</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowContentTransitions">true</item>
+
     </style>
 
     <style name="CustomToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -13,6 +16,14 @@
         <!-- HERE ARE THE CHANGES - Change color of different texts -->
         <item name="android:textColorPrimary">#fff</item>
     </style>
+
+
+    <style name="CustomTextView" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textColor">#0aeaf5</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
+
 
 
 </resources>

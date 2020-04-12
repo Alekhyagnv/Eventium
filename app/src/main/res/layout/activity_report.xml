@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/toos"
     xmlns:tools2="http://schemas.android.com/tools"
+    android:background="#107abc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -21,8 +22,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Resource person:"
-            android:textColor="#050505"
+            android:text="Resource Person:"
+            android:textColor="#4A148C"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,12 +31,13 @@
 
             />
 
-        <include layout="@layout/und" />
+        <include layout="@layout/undwhite" />
 
         <ImageView
             android:id="@+id/img_report"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginTop="5dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/iot"
@@ -62,7 +64,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="Event Name:"
                 android:layout_weight="1"
-                android:textColor="#050505"
+                android:textColor="#FEFAFA"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +84,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
 
-                android:textColor="#000000"
+                android:textColor="#F8F9FB"
                 android:textAllCaps="true"
                 android:textSize="16sp"
                 android:text="prabhas"
@@ -108,7 +110,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="Date Of Event:"
-                android:textColor="#050505"
+                android:textColor="#F7F6F6"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -122,7 +124,7 @@
                 android:padding="6dp"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textColor="#000000"
+                android:textColor="#FBFBFC"
                 android:text="22-11-2019"/>
         </LinearLayout>
 
@@ -144,9 +146,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="No. of students attended:"
+                android:text="No: of students attended"
 
-                android:textColor="#050505"
+                android:textColor="#FAF8F8"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -157,8 +159,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+
                 android:padding="6dp"
-                android:textColor="#000000"
+                android:textColor="#FCFCFE"
                 android:textSize="16sp"
                 android:text="0"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -188,13 +192,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="overall feedback:"
-                android:textColor="#050505"
-                android:textSize="18sp"
+                android:text="Overall Feedback:"
+                android:textColor="#4A148C"
+                android:layout_marginTop="5dp"
+                android:textSize="19sp"
+                android:padding="5dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/as4_report" />
+            <include layout="@layout/undwhite"/>
 
 
         </LinearLayout>
@@ -217,7 +224,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="Excellent:"
-                android:textColor="#050505"
+                android:textColor="#FFFDFD"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -231,7 +238,7 @@
                 android:padding="6dp"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textColor="#000000"
+                android:textColor="#FBFAFA"
                 android:text="0"/>
         </LinearLayout>
         <LinearLayout
@@ -253,7 +260,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="Very Good:"
-                android:textColor="#050505"
+                android:textColor="#FAF8F8"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -267,7 +274,7 @@
                 android:padding="6dp"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textColor="#000000"
+                android:textColor="#FCFBFB"
                 android:text="0"/>
         </LinearLayout>
         <LinearLayout
@@ -289,7 +296,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="Good:"
-                android:textColor="#050505"
+                android:textColor="#FEFCFC"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -303,7 +310,7 @@
                 android:padding="6dp"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textColor="#000000"
+                android:textColor="#FAF8F8"
                 android:text="0"/>
         </LinearLayout>
         <LinearLayout
@@ -325,7 +332,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="Average:"
-                android:textColor="#050505"
+                android:textColor="#FBF8F8"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -339,7 +346,7 @@
                 android:padding="6dp"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textColor="#000000"
+                android:textColor="#FCFBFB"
                 android:text="0"/>
         </LinearLayout>
         <LinearLayout
@@ -361,7 +368,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="Poor:"
-                android:textColor="#050505"
+                android:textColor="#FCFBFB"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textStyle="bold"
@@ -375,26 +382,21 @@
                 android:padding="6dp"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:textColor="#000000"
+                android:textColor="#FCFBFB"
                 android:text="0"/>
         </LinearLayout>
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/recyclerView_images2"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
 
-
-        </android.support.v7.widget.RecyclerView>
 
         <Button
             android:id="@+id/pie"
-            android:layout_width="111dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_gravity="center"
             android:text="pie chart"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/gradblue"
             android:visibility="visible" />
 
 

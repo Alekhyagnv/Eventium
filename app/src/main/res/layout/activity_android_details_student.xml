@@ -5,12 +5,13 @@
     xmlns:tools2="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color1"
+    android:background="#107abc"
     tools:context=".Android_details_student">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,6 +29,21 @@
                 app:layout_constraintTop_toTopOf="parent">
 
 
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_main2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#107abc"
+                    app:titleTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.008">
+
+
+                </android.support.v7.widget.Toolbar>
+
                 <TextView
                     android:id="@+id/t1_new1"
                     android:layout_width="match_parent"
@@ -37,14 +53,14 @@
                     android:layout_marginEnd="8dp"
                     android:text="Resource person:"
                     android:textColor="#ffffff"
-                    android:textSize="25sp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
 
                     />
 
-                <include layout="@layout/und" />
+                <include layout="@layout/undwhite" />
             </LinearLayout>
 
             <ImageView
@@ -90,8 +106,6 @@
 
 
 
-
-
                 <TextView
                     android:id="@+id/as11"
                     android:layout_width="match_parent"
@@ -106,6 +120,8 @@
                     android:textSize="16sp"
                     android:text="prabhas"
                     />
+
+
             </LinearLayout>
 
 
@@ -138,13 +154,20 @@
                     android:id="@+id/as21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="28dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
                     android:layout_weight="1"
                     android:textSize="16sp"
                     android:textColor="#ffffff"
                     android:text="22-11-2019"/>
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ei"
+                    android:id="@+id/editdate"
+                    android:visibility="invisible"
+                    android:layout_height="35dp"/>
             </LinearLayout>
 
 
@@ -176,7 +199,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/as41" />
 
-                <include layout="@layout/underline" />
+                <include layout="@layout/underlinewhite" />
             </LinearLayout>
 
             <TextView
@@ -223,42 +246,26 @@
                     android:id="@+id/as41"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="28dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
+                    android:layout_weight="1"
                     android:textSize="16sp"
                     android:textColor="#ffffff"
                     android:text="3rd yr"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     />
-
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ei"
+                    android:id="@+id/edittarget"
+                    android:visibility="invisible"
+                    android:layout_height="35dp"/>
 
 
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/as31"
-                tools2:layout_editor_absoluteX="32dp">
-
-                <Button
-                    android:id="@+id/attendance_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="attendance"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/as31"
-                    app:layout_constraintVertical_bias="1.0" />
 
 
                 <Button
@@ -268,60 +275,51 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
                     android:text="Edit"
-                    android:visibility="gone" />
-                <Button
-                    android:id="@+id/feedback"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:visibility="gone"
-                    android:layout_marginBottom="10dp"
-                    android:text="feedback"
-                     />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/report"
+                    />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/feedbackcount"
-                    android:visibility="gone"
-                    android:text="review"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/images1"
-                    android:visibility="visible"
-                    android:text="add images"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/images_view"
-                    android:visibility="visible"
-                    android:text="view images"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/report"
-                    android:visibility="visible"
-                    android:text="report"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/delete"
-                    android:visibility="visible"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edit_post"
                     android:text="delete"/>
 
+                <Button
+                    android:id="@+id/report"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="report"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout3"/>
 
-            </LinearLayout>
+
 
             <LinearLayout
+                android:id="@+id/linearlayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_weight="4"
+                android:layout_weight="6"
                 android:layout_margin="5dp"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+
                 app:layout_constraintTop_toBottomOf="@+id/as31">
 
                 <TextView
@@ -330,9 +328,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_weight="2"
+                    android:layout_weight="4"
                     android:padding="6dp"
-                    android:text="LINK :"
+                    android:text="LINK 1:"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
                     android:textSize="18sp"
@@ -346,7 +344,7 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:padding="6dp"
                     android:text="www"
@@ -356,7 +354,75 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
+
+
+
+                <Button
+                    android:layout_width="40dp"
+                    android:id="@+id/editlink"
+android:visibility="invisible"
+                    android:background="@drawable/ei"
+                    android:layout_height="35dp"/>
+
+
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearlayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="6"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toBottomOf="@+id/linearlayout2">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="4"
+                    android:padding="6dp"
+                    android:text="LINK 2:"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/as71"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="www"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+                <Button
+                    android:layout_width="40dp"
+                    android:id="@+id/editlink1"
+                    android:visibility="invisible"
+                    android:background="@drawable/ei"
+                    android:layout_height="35dp"/>
+
+
+            </LinearLayout>
+
+
 
 
 

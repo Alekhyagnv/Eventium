@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bggg"
+    tools:context=".Developer_team">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:textSize="22dp"
+          android:layout_marginBottom="5dp"
+          android:textColor="#fff"
+          android:textStyle="italic|bold"
+          android:text="Developers"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/border111"
+          android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+               <LinearLayout
+                   android:id="@+id/linearLayout"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:background="@drawable/bggg2"
+                   android:orientation="horizontal"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+
+               </LinearLayout>
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/circleImageView"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="88dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:src="@drawable/alekhya"
+                   app:civ_border_color="#000"
+                   app:civ_border_width="3dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+         </LinearLayout>
+
+         <com.ramotion.foldingcell.FoldingCell
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/folding_cell"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/cell_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:visibility="gone">
+
+               <TextView
+                   android:id="@+id/textView51"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:gravity="center"
+                   android:text="Gollamudi Alekhya"
+                   android:textColor="#fc730a"
+                   android:textSize="28dp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   />
+
+               <TextView
+                   android:id="@+id/textView61"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+
+                   android:gravity="center"
+                   android:text="Android Developer"
+                   android:textColor="#2a2aab"
+                   android:textSize="22dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+
+               <android.support.constraint.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="8dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView61">
+
+                  <ImageView
+                      android:id="@+id/saiemailimg1"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:layout_marginTop="5dp"
+                      android:layout_marginStart="44dp"
+                      android:layout_marginBottom="8dp"
+                      android:src="@drawable/icemail"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintVertical_bias="0.0" />
+
+                  <TextView
+                      android:id="@+id/saiemail1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginEnd="40dp"
+                      android:layout_marginTop="8dp"
+                      android:layout_marginBottom="8dp"
+                      android:text="17h61a05d5@cvsr.ac.in"
+                      android:textColor="#000"
+                      android:textSize="18dp"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintHorizontal_bias="0.0"
+                      app:layout_constraintStart_toEndOf="@+id/saiemailimg1"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintVertical_bias="0.0" />
+
+
+               </android.support.constraint.ConstraintLayout>
+
+
+            </LinearLayout>
+            ​
+            <LinearLayout
+                android:id="@+id/cell_title_view"
+                android:layout_width="match_parent"
+                android:weightSum="4"
+                android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/hand"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:layout_weight="3"
+                   android:src="@drawable/rightarrow"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:text="     Alekhya"
+                   android:textColor="#fc730a"
+                   android:textSize="28dp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+
+            </LinearLayout>
+            ​
+         </com.ramotion.foldingcell.FoldingCell>
+
+
+
+      </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/border111"
+          android:layout_marginTop="20dp"
+          android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+               <LinearLayout
+                   android:id="@+id/linearLayout100"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:background="@drawable/bggg2"
+                   android:orientation="horizontal"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+
+               </LinearLayout>
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/circleImageView100"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="88dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:src="@drawable/supriya"
+                   app:civ_border_color="#000"
+                   app:civ_border_width="3dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+         </LinearLayout>
+
+         <com.ramotion.foldingcell.FoldingCell
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/folding_cell100"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/cell_content_view100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:visibility="gone">
+
+               <TextView
+                   android:id="@+id/textView51100"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:gravity="center"
+                   android:text="Vallarapu Supriya"
+                   android:textColor="#fc730a"
+                   android:textSize="28dp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   />
+
+               <TextView
+                   android:id="@+id/textView61100"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+
+                   android:gravity="center"
+                   android:text="Android Developer"
+                   android:textColor="#2a2aab"
+                   android:textSize="22dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+
+               <android.support.constraint.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="8dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView61">
+
+                  <ImageView
+                      android:id="@+id/saiemailimg1100"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:layout_marginTop="5dp"
+                      android:layout_marginStart="44dp"
+                      android:layout_marginBottom="8dp"
+                      android:src="@drawable/icemail"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintVertical_bias="0.0" />
+
+                  <TextView
+                      android:id="@+id/saiemail1100"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginEnd="40dp"
+                      android:layout_marginTop="8dp"
+                      android:layout_marginBottom="8dp"
+                      android:text="17h61a05h2@cvsr.ac.in"
+                      android:textColor="#000"
+                      android:textSize="18dp"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintHorizontal_bias="0.0"
+                      app:layout_constraintStart_toEndOf="@+id/saiemailimg1100"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintVertical_bias="0.0" />
+
+
+               </android.support.constraint.ConstraintLayout>
+
+
+            </LinearLayout>
+            ​
+            <LinearLayout
+                android:id="@+id/cell_title_view100"
+                android:layout_width="match_parent"
+                android:weightSum="4"
+                android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/hand100"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:layout_weight="3"
+                   android:src="@drawable/rightarrow"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:text="     Supriya"
+                   android:textColor="#fc730a"
+                   android:textSize="28dp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+
+            </LinearLayout>
+            ​
+         </com.ramotion.foldingcell.FoldingCell>
+
+
+
+      </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/border111"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+               <LinearLayout
+                   android:id="@+id/linearLayout101"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:background="@drawable/bggg2"
+                   android:orientation="horizontal"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+
+               </LinearLayout>
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/circleImageView101"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="88dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:src="@drawable/abhijeeth"
+                   app:civ_border_color="#000"
+                   app:civ_border_width="3dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+         </LinearLayout>
+
+         <com.ramotion.foldingcell.FoldingCell
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/folding_cell101"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/cell_content_view101"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:visibility="gone">
+
+               <TextView
+                   android:id="@+id/textView51101"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:gravity="center"
+                   android:text="Abhijeet Shinde"
+                   android:textColor="#fc730a"
+                   android:textSize="28dp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   />
+
+               <TextView
+                   android:id="@+id/textView61101"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+
+                   android:gravity="center"
+                   android:text="Android Developer"
+                   android:textColor="#2a2aab"
+                   android:textSize="22dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+
+               <android.support.constraint.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginBottom="8dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView61">
+
+                  <ImageView
+                      android:id="@+id/saiemailimg1101"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:layout_marginTop="5dp"
+                      android:layout_marginStart="44dp"
+                      android:layout_marginBottom="8dp"
+                      android:src="@drawable/icemail"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintVertical_bias="0.0" />
+
+                  <TextView
+                      android:id="@+id/saiemail1101"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginEnd="40dp"
+                      android:layout_marginTop="8dp"
+                      android:layout_marginBottom="8dp"
+                      android:text="17h61a0561@cvsr.ac.in"
+                      android:textColor="#000"
+                      android:textSize="18dp"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintHorizontal_bias="0.0"
+                      app:layout_constraintStart_toEndOf="@+id/saiemailimg1101"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintVertical_bias="0.0" />
+
+
+               </android.support.constraint.ConstraintLayout>
+
+
+            </LinearLayout>
+            ​
+            <LinearLayout
+                android:id="@+id/cell_title_view101"
+                android:layout_width="match_parent"
+                android:weightSum="4"
+                android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/hand101"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:layout_weight="3"
+                   android:src="@drawable/rightarrow"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:text="Abhijeet Shinde"
+                   android:textColor="#fc730a"
+                   android:textSize="28dp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+
+            </LinearLayout>
+            ​
+         </com.ramotion.foldingcell.FoldingCell>
+
+
+
+      </LinearLayout>
+
+
+
+   </LinearLayout>
+
+
+
+
+
+</ScrollView>

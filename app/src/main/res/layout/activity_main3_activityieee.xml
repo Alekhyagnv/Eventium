@@ -40,7 +40,6 @@
             android:padding="10dp"
             android:textColor="#050505"
             android:textColorHint="#050505"
-            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/tvieee"
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,10 +59,12 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/border1"
             android:hint="Date"
+            android:focusable="false"
+            android:clickable="true"
+            android:editable="false"
             android:padding="10dp"
             android:textColor="#050505"
             android:inputType="date"
-            android:textStyle="bold"
             android:textColorHint="#050505"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -142,7 +143,6 @@
             android:padding="10dp"
             android:textColor="#050505"
             android:textColorHint="#050505"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -161,8 +161,6 @@
             android:padding="10dp"
             android:textColor="#050505"
             android:textColorHint="#050505"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -185,8 +183,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edieeelink"
+            app:layout_constraintTop_toBottomOf="@id/edieeelink1"
             tools:layout_editor_absoluteY="645dp" />
+
         <EditText
             android:id="@+id/edieeelink"
             android:layout_width="match_parent"
@@ -195,19 +194,36 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/border1"
-            android:hint="Link(optional)"
+            android:hint="Registeration link"
             android:inputType="textMultiLine"
             android:padding="10dp"
             android:textColor="#050505"
             android:textColorHint="#050505"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edieeetarget"
             app:layout_constraintVertical_bias="0.0" />
 
+        <EditText
+            android:id="@+id/edieeelink1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border1"
+            android:hint="Optional Link"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="#050505"
+            android:textColorHint="#050505"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edieeelink" />
 
 
     </android.support.constraint.ConstraintLayout>

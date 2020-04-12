@@ -4,8 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="#107abc"
     tools:context=".Activity_setup">
+
+
+    <TextView
+        android:id="@+id/account_det"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Account Details"
+        android:layout_marginTop="60dp"
+        android:padding="8dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+    <EditText
+        android:id="@+id/fac_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/et_bg"
+        android:hint="Name:"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="#0D47A1"
+        android:textColor="#0D47A1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_det"  />
+
+
+
+    <EditText
+        android:id="@+id/fac_dept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/et_bg"
+        android:hint="Department:"
+        android:inputType="text"
+        android:textColorHint="#0D47A1"
+        android:padding="16dp"
+        android:textColor="#0D47A1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fac_name" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/blue"
+        android:text="SAVE "
+        android:id="@+id/fac_save"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/fac_dept" />
 
 
 

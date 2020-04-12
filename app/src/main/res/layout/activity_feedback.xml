@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/feed"
+    android:background="#107abc"
     tools:context=".Feedback">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TextView
         android:id="@+id/feedbacktext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:text="FeedBack Form"
         android:textColor="#FCFBFB"
         android:textStyle="bold"
@@ -23,40 +28,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-    <TextView
-        android:id="@+id/tt1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="10dp"
-        android:text="Roll No"
-        android:textColor="#FCFBFB"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/feedbacktext"/>
-    <EditText
-        android:id="@+id/feed_hall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/white"
-        android:background="@drawable/et_bg"
-        android:padding="10dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textColorHint="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tt1"/>
+
     <TextView
         android:id="@+id/tt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="College Email-Id"
         android:textColor="#FCFBFB"
         android:textStyle="bold"
@@ -64,17 +43,17 @@
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/feed_hall"/>
+        app:layout_constraintTop_toBottomOf="@id/feedbacktext"/>
     <EditText
         android:id="@+id/feed_mail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:padding="10dp"
-        android:textColor="#FCFBFB"
+        android:textColor="#046199"
 
         android:background="@drawable/et_bg"
-        android:textColorHint="@color/white"
+        android:textColorHint="#046199"
 
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,8 +80,8 @@
         android:layout_marginStart="8dp"
         android:background="@drawable/et_bg"
         android:padding="10dp"
-        android:textColorHint="@color/white"
-        android:textColor="#FCFBFB"
+        android:textColorHint="#046199"
+        android:textColor="#046199"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,7 +110,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/et_bg"
         android:padding="10dp"
-        android:textColor="#FCFBFB"
+        android:textColor="#046199"
         android:textColorHint="@color/white"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -175,7 +154,7 @@
             android:text="Excellent"
 
             android:textColor="@color/white"
-            android:textStyle="bold" />
+             />
 
         <RadioButton
             android:layout_width="match_parent"
@@ -184,7 +163,7 @@
             android:id="@+id/verygood"
             android:text="Very Good"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            />
 
         <RadioButton
             android:layout_width="match_parent"
@@ -193,7 +172,7 @@
             android:text="Good"
             android:id="@+id/good"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+             />
 
         <RadioButton
             android:layout_width="match_parent"
@@ -203,7 +182,7 @@
             android:id="@+id/average"
             android:textColor="@color/white"
 
-            android:textStyle="bold" />
+             />
 
         <RadioButton
             android:layout_width="match_parent"
@@ -213,7 +192,7 @@
             android:id="@+id/poor"
             android:textColor="@color/white"
 
-            android:textStyle="bold" />
+            />
 
 
     </RadioGroup>
@@ -235,4 +214,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radio_group_feed" />
 
-</android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

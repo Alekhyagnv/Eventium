@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/color1"
+    android:background="#107abc"
     app:cardUseCompatPadding="true"
     android:layout_height="wrap_content">
 
@@ -26,7 +27,7 @@
                 android:textSize="22sp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="event name"
+                android:text="Event Name"
                 android:layout_margin="5dp"
                 android:gravity="center"
                 android:textColor="#000"
@@ -40,7 +41,7 @@
                 android:layout_gravity="center"
                 android:transitionName="trans"
                 android:scaleType="centerCrop"
-                android:background="@mipmap/ic_launcher"/>
+                />
 
 
 
@@ -98,13 +99,30 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:id="@+id/retrivallink"/>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="0dp"
+                android:layout_weight="1"
+                android:text="link"
+
+                android:gravity="center"
+                android:textColor="#020202"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/retrivallink1"/>
+
 
 
         </LinearLayout>
 
 
 
+
     </LinearLayout>
+
+
 
 
 
